@@ -4,3 +4,6 @@
 [submodule "libigl"]
 	path = external/libigl
 	url = https://github.com/libigl/libigl.git
+[submodule "external/dmaps"]
+	path = external/dmaps
+	url = https://github.com/hsidky/dmaps
