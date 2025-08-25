@@ -25,6 +25,8 @@ set(${LIBRARY_NAME}_HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/include/${LIBRARY_NAME}/WeightInterpolation.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/${LIBRARY_NAME}/somig.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/${LIBRARY_NAME}/BHC.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/${LIBRARY_NAME}/InteriorDistance.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/${LIBRARY_NAME}/MeanValueCoordinatesInteriorDistance.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/${LIBRARY_NAME}/point3.h)
 
 set(${LIBRARY_NAME}_SOURCES
@@ -37,6 +39,8 @@ set(${LIBRARY_NAME}_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/InfluenceMap.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Parametrization.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/WeightInterpolation.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/InteriorDistance.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/MeanValueCoordinatesInteriorDistance.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/somig.cpp)
 
 # Add the source files to the library.
