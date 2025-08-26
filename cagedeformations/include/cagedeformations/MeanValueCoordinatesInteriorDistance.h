@@ -10,10 +10,10 @@ struct IDFParams {
 };
 
 struct IDFAdapter {
-    void initialize(const Eigen::MatrixXd& C, const Eigen::MatrixXi& CF,
-        const Eigen::Vector3d& srcP)
+    void initialize(const Eigen::MatrixXd& C, const Eigen::MatrixXi& CF)
     {
         computeIDFParams(C, CF);
+        Eigen::Vector3d srcP = C.colwise().mean();
 
         vertices = C;
         faces = CF;

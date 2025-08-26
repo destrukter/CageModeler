@@ -4,6 +4,7 @@
 #include <cagedeformations/MaximumEntropyCoordinates.h>
 #include <cagedeformations/MaximumLikelihoodCoordinates.h>
 #include <cagedeformations/WeightInterpolation.h>
+#include <cagedeformations/MeanValueCoordinatesInteriorDistance.h>
 #include <igl/boundary_conditions.h>
 #include <igl/harmonic.h>
 #include <igl/bbw.h>
@@ -178,6 +179,17 @@ MeshComputeWeightsOperation::ExecutionResult MeshComputeWeightsOperation::Execut
 
 			return ExecutionResult("Failed to compute bounded biharmonic weights");
 		}
+	}
+	else if (_params._deformationType == DeformationType::MVCID)
+	{
+		IDFAdapter idf;
+		idf.initialize(_params._cage._vertice, _params._cage._faces);
+
+		computeMVCID(_params._cage._vertices,
+			_params._cage._faces,
+			_params._mesh._vertices, 
+			idf,
+			weights);
 	}
 
 	if (DeformationTypeHelpers::RequiresEmbedding(_params._deformationType))

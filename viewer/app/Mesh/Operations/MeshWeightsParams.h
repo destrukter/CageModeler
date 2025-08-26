@@ -19,7 +19,8 @@ enum class DeformationType : uint8_t
 	MLC,
 	Green,
 	QGC,
-	Somigliana
+	Somigliana,
+	MVCID
 };
 
 struct DeformationTypeHelpers
@@ -67,6 +68,11 @@ struct DeformationTypeHelpers
 		{
 			return "Somigliana";
 		}
+		else if (deformationType == DeformationType::MVCID)
+		{
+			return "MVCID";
+		}
+
 
 		return { };
 	}

@@ -19,7 +19,8 @@ struct ProjecSettingsHelpers
 		"MLC",
 		"Green",
 		"QGC",
-		"Somigliana"
+		"Somigliana",
+		"MVCID"
 	};
 
 	static constexpr std::array LBCWeightingSchemeNames = {

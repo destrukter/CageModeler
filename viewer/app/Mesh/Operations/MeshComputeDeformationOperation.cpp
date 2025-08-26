@@ -74,7 +74,7 @@ MeshComputeDeformationOperation::ExecutionResult MeshComputeDeformationOperation
 				_params._weightsData._psiQuad,
 				vertexData[i]._vertices);
 		}
-		else if (_params._deformationType == DeformationType::MVC ||_params._deformationType == DeformationType::QMVC || _params._deformationType == DeformationType::MLC ||
+		else if (_params._deformationType == DeformationType::MVC || _params._deformationType == DeformationType::MVCID ||_params._deformationType == DeformationType::QMVC || _params._deformationType == DeformationType::MLC ||
 			_params._deformationType == DeformationType::MEC)
 		{
 			vertexData[i]._vertices = _params._weightsData._weights.transpose() * _params._deformedCage._vertices;
